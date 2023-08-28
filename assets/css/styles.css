@@ -11,11 +11,23 @@
   /*========== Colors ==========*/
   /*Color mode HSL(hue, saturation, lightness)*/
   --first-color: hsl(207, 65%, 65%);
-  --title-color: hsl(0, 0%, 3%);
-  --text-color: hsl(210, 11%, 7%);
-  --text-color-light: hsl(210, 3%, 35%);
-  --body-color: hsl(242, 100%, 88%);
+  --title-color: hsl(256, 50%, 20%);
+  --text-color: hsl(310, 74%, 18%);
+  --text-color-light: hsl(216, 33%, 97%);
+  --body-color: background: #16BFFD;
+  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #CB3066, #16BFFD);
+  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #CB3066, #16BFFD);
+  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
   --container-color: hsl(240, 52%, 75%);
+
+  --nav-color: background: #16BFFD;
+  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #CB3066, #16BFFD);
+  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #CB3066, #16BFFD);
 
   /* Change the first number */
   /* Blue: 207 - Purple: 250 - Pink: 356 - Teal: 174 */
@@ -120,8 +132,20 @@ img {
 body.dark-theme {
   --title-color: hsl(207, 4%, 95%);
   --text-color: hsl(207, 4%, 65%);
-  --body-color: hsl(207, 4%, 10%);
+  --body-color: background: #000000;
+  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #434343, #000000);
+  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #434343, #000000);
+  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
   --container-color: hsl(207, 4%, 12%);
+
+  --nav-color: background: #000000;
+  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #434343, #000000);
+  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #434343, #000000);
 }
 
 /*========== 
@@ -215,8 +239,11 @@ body.dark-theme {
   width: 100%;
   position: fixed;
   bottom: 2rem;
+
   left: 0;
   z-index: var(--z-fixed);
+
+
 
 
 }
@@ -227,10 +254,12 @@ body.dark-theme {
   justify-content: space-between;
   align-items: center;
   background-color: var(--body-color);
-  box-shadow: 0 4px 20px hsla(207, 24%, 35%, .1);
+  box-shadow: 0 4px 20px hsla(207, 97%, 14%, 0.1);
   padding-inline: 1.5rem;
   border-radius: 3rem;
   transition: background .4s;
+
+
 }
 
 .nav__logo,
@@ -832,6 +861,7 @@ body.dark-theme {
   font-size: var(--small-font-size);
   font-weight: var(--font-semi-bold);
   margin-bottom: 2.5rem;
+
 }
 
 .contact__title i {
@@ -903,7 +933,8 @@ body.dark-theme {
   border-radius: 2rem;
   padding: 1.5rem;
   font-size: var(--normal-font-size);
-  font-family: var(--title-color);
+  color: var(--title-color);
+
   background: none;
   outline: none;
   z-index: 1;
@@ -912,7 +943,7 @@ body.dark-theme {
 
 .contact__form-tag {
   position: absolute;
-  top: -0.75rem;
+  top: -1.75rem;
   left: 1.25rem;
   z-index: 10;
   background-color: var(--body-color);
@@ -1027,11 +1058,11 @@ body.dark-theme {
 ::-webkit-scrollbar {
   width: .6rem;
   border-radius: .5rem;
-  background-color: hsl(207, 4%, 75%);
+  background-color: hsl(202, 66%, 44%);
 }
 
 ::-webkit-scrollbar-thumb {
-  background-color: hsl(207, 4%, 65%);
+  background-color: hsl(206, 98%, 16%);
   border-radius: .5rem;
 }
 
@@ -1441,53 +1472,61 @@ body.dark-theme {
   .testimonial__container .swiper-button-next {
     right: calc(50% - 5rem);
   }
-  .testimonial__container .swiper-slide{
+
+  .testimonial__container .swiper-slide {
     margin-bottom: 6rem;
   }
-  .testimonial__description{
+
+  .testimonial__description {
     font-size: var(--h2-font-size);
     margin-bottom: 2rem;
   }
-  .testimonial__img{
+
+  .testimonial__img {
     width: 200px;
     top: 13rem;
     right: 4rem;
   }
 
-  .contact__title{
+  .contact__title {
     margin-bottom: 3rem;
 
   }
-  .contact__title i{
+
+  .contact__title i {
     font-size: 1.25rem;
   }
-  .contact__info{
+
+  .contact__info {
     row-gap: 3rem;
   }
-  .contact__data-info{
+
+  .contact__data-info {
     font-size: var(--normal-font-size);
   }
-  .contact__form{
+
+  .contact__form {
     row-gap: 2.5rem;
   }
 
-  .footer__container{
+  .footer__container {
     padding: 4rem 0 3rem;
   }
-  .footer__list{
+
+  .footer__list {
     column-gap: 3rem;
     margin: 3rem 0;
   }
 
-  .footer__social{
+  .footer__social {
     column-gap: 2rem;
   }
 
-  .footer__social-link{
+  .footer__social-link {
     font-size: 1.5rem;
   }
 
-  .footer__copy{
+  .footer__copy {
     margin-top: 5rem;
   }
 
